@@ -35,7 +35,7 @@ $conn->close(); // Close the database connection
             <li><a href="#">Orders</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">About Us</a></li>
-            <li><a href="chef_logout.php">Logout</li>
+            <li><a href="chef_logout.php">Logout</a></li>
         </ul>
 
         <div class="hamburger">

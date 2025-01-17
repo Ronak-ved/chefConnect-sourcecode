@@ -32,7 +32,7 @@ body {
 }
 
 .registerform,
-.loginform {
+.loginform{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -142,13 +142,13 @@ h1 {
     position: absolute;
     top: 0;
     width: 100%;
-    height:15%;
+    height: 15%;
     padding: 10px 10px;
     background: linear-gradient(90deg, #290248, #3c006b);
     color: #020618;
     display: flex;
-    align-items: center; /* Align logo and text on the same line */
-    justify-content: space-between; /* Space between logo and nav items */
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar .comname img {
@@ -156,27 +156,21 @@ h1 {
     height: 70px;
     border-radius: 50px;
     object-fit: contain;
-    
-    /*padding: 10px 10px;*/
 }
 
-.navbar .comname{
+.navbar .comname {
     width: 28%;
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
-    align-items:space-around;
-    
-    /*padding: 10px 10px;*/
+    justify-content: space-around;
+    align-items: space-around;
 }
 
 .comname {
     font-size: 50px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    color:#fff;
-    padding: 0; /* Remove extra padding */
-    margin:0; /* Remove extra margin */
+    color: #fff;
 }
 
 .nav-link {
@@ -195,21 +189,153 @@ h1 {
 
 .nav-link li a {
     text-decoration: none;
-    color:#fff;
+    color: #fff;
     padding: 10px 20px;
     font-size: 20px;
     transition: color 0.3s;
 }
 
-.nav-link a:hover {
+.nav-link a:hover,
+.nav-link a.active {
     color: #007bff;
+    border-bottom: 2px solid #007bff;
 }
 
-/* Profile page styling */
-.profile-container{
-    width: 90%;
-    max-width: 600px;
-    margin: 50px auto;
+.search-container {
+    width: 100%;
+    margin: auto;
+    max-width: 700px;
+}
+
+.searchbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 8px 18px;
+    border: 2px solid #290248;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.searchbar input {
+    flex: 1;
+    background: transparent;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    padding: 12px 15px;
+    font-size: 18px;
+    color: #290248;
+}
+.searchbar input:focus{
+ border-color: none;
+ box-shadow:none;
+}
+.searchbar input::placeholder{
+    color: #3c006b;
+}
+
+.searchbar button img {
+    width: 24px; /* Adjust icon size */
+}
+
+.searchbar button {
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: #290248;
+    cursor: pointer;
+}
+
+/* designing chef card */
+.top-rated-chefs {
+    margin-top: 5%;
+    padding: 30px;
+    background: linear-gradient(90deg, #290248, #3c006b);
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.top-rated-chef-head{
+  margin-bottom: 10px;
+}
+
+.chef-profiles {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.chef-card {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: 250px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    color: #290248;
+}
+
+.chef-photo {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #290248;
+}
+
+.chef-name {
+    font-size: 18px;
+    color:#3c006b;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.chef-rating {
+    font-size: 16px;
+    color: #FFD700;
+}
+
+.chef-specialty {
+    font-size: 14px;
+    color:#3c006b;
+    font-weight: bold;
+}
+
+.home-container{
+    margin-top: 10%;
+}
+/* designing view hire buttons */
+.view-hire-buttons{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.view-hire-link{
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.view-hire-link li a {
+    text-decoration: none;
+    background: linear-gradient(90deg, #290248, #3c006b);
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 50px;
+}
+/* user profile page designing */ 
+.profile-container {
+    margin-top: 7%;
     background: linear-gradient(90deg, #290248, #3c006b);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
@@ -217,13 +343,44 @@ h1 {
 }
 
 #prof-head {
+    font-size: 25px;
     color: #fff;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.form-group {
-    margin-bottom: 15px;
+.profile-pic-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic-label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#profile-pic-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 60%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.profile-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.profile-form .form-group {
+    flex: 1 1 45%; /* Adjust the percentage to control the width */
+    min-width: 200px; /* Optional: To ensure elements don't get too small */
+}
+
+.profile-form .full-width {
+    flex: 1 1 100%;
 }
 
 label {
@@ -234,13 +391,21 @@ label {
 }
 
 .profile-form input,
+.profile-form select,
 .profile-form textarea {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
     margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #d4dce5;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .btn {
@@ -252,10 +417,26 @@ label {
     cursor: pointer;
     border-radius: 10px;
     width: 100%;
+    transition: all 0.3s ease;
+    
+}
+#profile-update-button{
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    margin: auto;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 50%;
+    transition: all 0.3s ease;
+
 }
 
 .btn:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 /* Media Queries for Responsiveness */
@@ -289,10 +470,6 @@ label {
         font-size: 18px;
     }
 
-    .profile-container {
-        width: 95%;
-    }
-
     .inputbox input,
     .profile-form input,
     .profile-form textarea {
@@ -300,6 +477,7 @@ label {
         padding: 8px;
     }
 }
+
 
 /* LANDING PAGE DESIGNING */
 
@@ -385,6 +563,106 @@ label {
 
 /* chef profile Designing */
 
-.chef-profile{
+.chef-profile-container {
+    width: 90%;
+    margin: 10% auto;
     background: linear-gradient(90deg, #0A0F44, #00C1D0);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+#chef-prof-head {
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.photo-upload-center {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.profile-photo-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#profile-photo-preview {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+#photo-upload {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+}
+
+.chef-profile-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-left: 20px;
+    justify-content: space-between;
+}
+
+.chef-profile-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.chef-profile-item {
+    width: 30%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea,select {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus,select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#chef-profile-update-button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    margin: auto;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 50%;
+    transition: all 0.3s ease;
+}
+
+#chef-profile-update-button:hover {
+    background-color: #003d99;
+    transform: scale(1.05);
 }

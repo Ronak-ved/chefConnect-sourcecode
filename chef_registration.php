@@ -159,8 +159,10 @@ $conn->close(); // Close the database connection
                 <div class="inputbox">
                     <select id="gender" name="gender" required>
                         <option value="">Select Your Gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+
                     </select>
                     <span class="error"><?php echo $errors['gender'] ?? ''; ?></span>
                 </div>
@@ -169,9 +171,9 @@ $conn->close(); // Close the database connection
                 <div class="inputbox">
                     <select id="city" name="city" required>
                         <option value="">Lives In</option>
-                        <option value="mulund">Mulund</option>
-                        <option value="bhandup">Bhandup</option>
-                        <option value="ghatkopar">Ghatkopar</option>
+                        <option value="Mulund">Mulund</option>
+                        <option value="Bhandup">Bhandup</option>
+                        <option value="Ghatkopar">Ghatkopar</option>
                     </select>
                     <span class="error"><?php echo $errors['city'] ?? ''; ?></span>
                 </div>
@@ -186,9 +188,10 @@ $conn->close(); // Close the database connection
                 <div class="inputbox">
                     <select id="splfood" name="splfood" required>
                         <option value="">Speciality In</option>
-                        <option value="rajasthani">Rajasthani</option>
-                        <option value="gujarati">Gujarati</option>
-                        <option value="punjabi">Punjabi</option>
+                        <option value="Rajasthani">Rajasthani</option>
+                        <option value="Gujarati">Gujarati</option>
+                        <option value="Punjabi">Punjabi</option>
+                        <option value="Maharashtrian">Maharashtrian</option>
                     </select>
                     <span class="error"><?php echo $errors['splfoof'] ?? ''; ?></span>
                 </div>
