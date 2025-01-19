@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.reglog {
+    background-image: url('assets/web_images/background.jpg');
+    /* Replace with the correct path to your image */
+    background-size: cover;
+    /* Ensures the image covers the entire screen */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    background-attachment: fixed;
+    /* Keeps the background fixed during scrolling */
+    background-position: center center;
+    /* Centers the image on the screen */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.registerform,
+.loginform {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(180deg, #290248, #3c006b);
+    align-items: center;
+    color: #1a0308;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: -10px 0;
+    padding: 20px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.register-loginlink p {
+    text-align: center;
+    color: #fff;
+}
+
+.register-loginlink a {
+    font-size: 14px;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+
+#registerLoginBtn {
+    width: 100%;
+    max-width: 200px;
+    background-color: #007bff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+#registerLoginBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Input fields styling */
+.inputbox {
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.inputbox input,
+.inputbox select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-top: 5px;
+    background: #f4f4f4;
+}
+
+.inputbox input:focus,
+.inputbox select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.inputbox input::placeholder,
+.inputbox select::placeholder {
+    color: #888;
+}
+
+.inputbox .error {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+}
+
+.inputbox.success input,
+.inputbox.success select {
+    border-color: green;
+}
+
+.inputbox.error input,
+.inputbox.error select {
+    border-color: red;
+}
+
+.forgetlink {
+    font-size: 14.5px;
+    color: aqua;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+/* user home page designing */
+/* Navbar styling */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 15%;
+    padding: 10px 10px;
+    background: linear-gradient(90deg, #290248, #3c006b);
+    color: #020618;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .comname img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    object-fit: contain;
+}
+
+.navbar .comname {
+    width: 28%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: space-around;
+}
+
+.comname {
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.nav-link a:hover,
+.nav-link a.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+.search-container {
+    width: 100%;
+    margin: auto;
+    max-width: 700px;
+}
+
+.searchbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 0 18px;
+    border: 2px solid #290248;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.searchbar input {
+    flex: 1;
+    background: transparent;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    padding: 12px 15px;
+    font-size: 18px;
+    color: #290248;
+}
+
+.searchbar input:focus {
+    border-color: none;
+    box-shadow: none;
+}
+
+.searchbar input::placeholder {
+    color: #3c006b;
+}
+
+.searchbar button img {
+    width: 24px;
+    /* Adjust icon size */
+}
+
+.searchbar button {
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: #290248;
+    cursor: pointer;
+}
+
+/* designing chef card */
+.top-rated-chefs {
+    margin-top: 5%;
+    padding: 30px;
+    background: linear-gradient(90deg, #290248, #3c006b);
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.top-rated-chef-head {
+    margin-bottom: 10px;
+}
+
+.chef-profiles {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.chef-card {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: 250px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    color: #290248;
+}
+
+.chef-photo {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #290248;
+}
+
+.chef-name {
+    font-size: 18px;
+    color: #3c006b;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.chef-rating {
+    font-size: 16px;
+    color: #FFD700;
+}
+
+.chef-specialty {
+    font-size: 14px;
+    color: #3c006b;
+    font-weight: bold;
+}
+
+.home-container {
+    margin-top: 10%;
+}
+
+/* designing view hire buttons */
+.view-hire-buttons {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.view-hire-link {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.view-hire-link li a {
+    text-decoration: none;
+    background: linear-gradient(90deg, #290248, #3c006b);
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 50px;
+}
+
+/* user profile page designing */
+.profile-container {
+    margin-top: 7%;
+    width: 50%;
+    background: linear-gradient(90deg, #290248, #3c006b);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+#prof-head {
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic-label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#profile-pic-preview {
+    text-align: center;
+    width: 121px;
+    height: 121px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+#img-preview {
+    width: 118px;
+    height: 118px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.profile-form .form-group {
+    flex: 1 1 45%;
+    /* Adjust the percentage to control the width */
+    min-width: 200px;
+    /* Optional: To ensure elements don't get too small */
+}
+
+.profile-form .full-width {
+    flex: 1 1 100%;
+}
+
+label {
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.profile-form input,
+.profile-form select,
+.profile-form textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #d4dce5;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    transition: all 0.3s ease;
+
+}
+
+#profile-update-button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    margin: auto;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 50%;
+    transition: all 0.3s ease;
+
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .profile-container {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #registerLoginBtn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .inputbox input,
+    .profile-form input,
+    .profile-form textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+
+/* LANDING PAGE DESIGNING */
+
+.landing-container {
+    text-align: center;
+    background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+#landh1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#landp {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.user-btn {
+    background: linear-gradient(90deg, #290248, #3c006b);
+    color: white;
+}
+
+.chef-btn {
+    background: linear-gradient(90deg, #0A0F44, #00C1D0);
+    color: white;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Chef login and registration page desinging */
+
+.chef-registerform,
+.chef-loginform {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(90deg, #0A0F44, #00C1D0);
+    align-items: center;
+    color: #1a0308;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+/* chef home page Designing */
+
+.chef-nav {
+    z-index: 100;
+    background: linear-gradient(90deg, #0A0F44, #00C1D0);
+}
+
+/* chef profile Designing */
+
+.chef-profile-container {
+    width: 90%;
+    margin: 10% auto;
+    background: linear-gradient(90deg, #0A0F44, #00C1D0);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+#chef-prof-head {
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.photo-upload-center {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.profile-photo-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#profile-photo-preview {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+#photo-upload {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+}
+
+.chef-profile-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-left: 20px;
+    justify-content: space-between;
+}
+
+.chef-profile-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.chef-profile-item {
+    width: 30%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#chef-profile-update-button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    margin: auto;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 50%;
+    transition: all 0.3s ease;
+}
+
+#chef-profile-update-button:hover {
+    background-color: #003d99;
+    transform: scale(1.05);
+}
