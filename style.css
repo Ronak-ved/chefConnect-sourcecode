@@ -6,12 +6,18 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-.reglog{
-    background-image: url('background.jpg'); /* Replace with the correct path to your image */
-    background-size: cover; /* Ensures the image covers the entire screen */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-attachment: fixed; /* Keeps the background fixed during scrolling */
-    background-position: center center; /* Centers the image on the screen */
+
+.reglog {
+    background-image: url('assets/web_images/background.jpg');
+    /* Replace with the correct path to your image */
+    background-size: cover;
+    /* Ensures the image covers the entire screen */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    background-attachment: fixed;
+    /* Keeps the background fixed during scrolling */
+    background-position: center center;
+    /* Centers the image on the screen */
 }
 
 body {
@@ -32,7 +38,7 @@ body {
 }
 
 .registerform,
-.loginform{
+.loginform {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -58,7 +64,7 @@ h1 {
 
 .register-loginlink a {
     font-size: 14px;
-    color:#0056b3;
+    color: #0056b3;
     text-decoration: none;
 }
 
@@ -66,7 +72,7 @@ h1 {
 #registerLoginBtn {
     width: 100%;
     max-width: 200px;
-    background-color:#007bff;
+    background-color: #007bff;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
@@ -201,23 +207,30 @@ h1 {
     border-bottom: 2px solid #007bff;
 }
 
+/* desinging searchbar */
 .search-container {
     width: 100%;
     margin: auto;
     max-width: 700px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 
-.searchbar {
+#searchbar {
     width: 100%;
     display: flex;
     align-items: center;
-    border-radius: 60px;
-    padding: 8px 18px;
+    border-radius: 40px;
+    padding: 0 18px;
     border: 2px solid #290248;
     backdrop-filter: blur(4px) saturate(180%);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
-.searchbar input {
+#searchbar input {
     flex: 1;
     background: transparent;
     margin-top: 10px;
@@ -227,26 +240,94 @@ h1 {
     font-size: 18px;
     color: #290248;
 }
-.searchbar input:focus{
- border-color: none;
- box-shadow:none;
+
+#searchbar input:focus {
+    outline: none; /* Remove default focus outline */
 }
-.searchbar input::placeholder{
+
+#searchbar input::placeholder {
     color: #3c006b;
 }
 
-.searchbar button img {
-    width: 24px; /* Adjust icon size */
+#searchbar button img {
+    width: 24px;
+    height: 24px;
 }
 
-.searchbar button {
+#searchbar button {
     border: none;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     background: #290248;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    transition: background-color 0.3s;
 }
+
+#searchbar button:hover {
+    background-color: #3c006b;
+}
+
+/* Floating card styles */
+.floating-card {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+    padding: 20px;
+}
+
+.close-card {
+    text-align: right;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Chef cards styles */
+.results-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.chef-cards {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    flex: 0 0 auto; /* Make cards not grow beyond their content */
+}
+
+.chef-cards img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+}
+
+.chef-cards h3 {
+    margin: 8px 0;
+    font-size: 1.2em;
+}
+
+.chef-cards p {
+    font-size: 1em;
+    color: #555;
+}
+
+
 
 /* designing chef card */
 .top-rated-chefs {
@@ -259,8 +340,8 @@ h1 {
     text-align: left;
 }
 
-.top-rated-chef-head{
-  margin-bottom: 10px;
+.top-rated-chef-head {
+    margin-bottom: 10px;
 }
 
 .chef-profiles {
@@ -293,7 +374,7 @@ h1 {
 
 .chef-name {
     font-size: 18px;
-    color:#3c006b;
+    color: #3c006b;
     font-weight: bold;
     margin: 8px 0;
 }
@@ -305,26 +386,29 @@ h1 {
 
 .chef-specialty {
     font-size: 14px;
-    color:#3c006b;
+    color: #3c006b;
     font-weight: bold;
 }
 
-.home-container{
+.home-container {
     margin-top: 10%;
 }
+
 /* designing view hire buttons */
-.view-hire-buttons{
+.view-hire-buttons {
     margin-top: 20px;
     margin-bottom: 5px;
 }
-.view-hire-link{
+
+.view-hire-link {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     gap: 20px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 .view-hire-link li a {
     text-decoration: none;
     background: linear-gradient(90deg, #290248, #3c006b);
@@ -333,9 +417,11 @@ h1 {
     color: #fff;
     border-radius: 50px;
 }
-/* user profile page designing */ 
+
+/* user profile page designing */
 .profile-container {
     margin-top: 7%;
+    width: 50%;
     background: linear-gradient(90deg, #290248, #3c006b);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
@@ -360,11 +446,18 @@ h1 {
 }
 
 #profile-pic-preview {
-    width: 120px;
-    height: 120px;
-    border-radius: 60%;
-    object-fit: cover;
+    text-align: center;
+    width: 121px;
+    height: 121px;
+    border-radius: 50%;
     border: 2px solid #fff;
+}
+
+#img-preview {
+    width: 118px;
+    height: 118px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .profile-form {
@@ -375,8 +468,10 @@ h1 {
 }
 
 .profile-form .form-group {
-    flex: 1 1 45%; /* Adjust the percentage to control the width */
-    min-width: 200px; /* Optional: To ensure elements don't get too small */
+    flex: 1 1 45%;
+    /* Adjust the percentage to control the width */
+    min-width: 200px;
+    /* Optional: To ensure elements don't get too small */
 }
 
 .profile-form .full-width {
@@ -418,9 +513,10 @@ textarea:focus {
     border-radius: 10px;
     width: 100%;
     transition: all 0.3s ease;
-    
+
 }
-#profile-update-button{
+
+#profile-update-button {
     background-color: #0056b3;
     color: white;
     border: none;
@@ -491,13 +587,13 @@ textarea:focus {
     width: 100%;
 }
 
-#landh1{
+#landh1 {
     font-size: 28px;
     color: #333;
     margin-bottom: 10px;
 }
 
-#landp{
+#landp {
     font-size: 16px;
     color: #666;
     margin-bottom: 30px;
@@ -543,7 +639,8 @@ textarea:focus {
 
 /* Chef login and registration page desinging */
 
-.chef-registerform, .chef-loginform{
+.chef-registerform,
+.chef-loginform {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -556,7 +653,7 @@ textarea:focus {
 
 /* chef home page Designing */
 
-.chef-nav{
+.chef-nav {
     z-index: 100;
     background: linear-gradient(90deg, #0A0F44, #00C1D0);
 }
@@ -579,36 +676,30 @@ textarea:focus {
     margin-bottom: 10px;
 }
 
-.photo-upload-center {
+.chef-profile-pic-container {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.profile-photo-wrapper {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
+.chef-profile-pic-label {
+    display: inline-block;
+    cursor: pointer;
 }
 
-#profile-photo-preview {
-    width: 100%;
-    height: 100%;
+#chef-profile-pic-preview {
+    text-align: center;
+    width: 121px;
+    height: 121px;
     border-radius: 50%;
-    object-fit: cover;
     border: 2px solid #fff;
 }
 
-#photo-upload {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-    top: 0;
-    left: 0;
+#chef-img-preview {
+    width: 118px;
+    height: 118px;
+    object-fit: cover;
+    border-radius: 50%;
 }
-
 .chef-profile-form {
     display: flex;
     flex-wrap: wrap;
@@ -634,7 +725,9 @@ label {
     font-weight: bold;
 }
 
-input, textarea,select {
+input,
+textarea,
+select {
     width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -644,7 +737,9 @@ input, textarea,select {
     transition: all 0.3s ease;
 }
 
-input:focus, textarea:focus,select:focus {
+input:focus,
+textarea:focus,
+select:focus {
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
