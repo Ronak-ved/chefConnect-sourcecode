@@ -207,55 +207,150 @@ h1 {
     border-bottom: 2px solid #007bff;
 }
 
+
+
+/* Search Bar */
 .search-container {
-    width: 100%;
-    margin: auto;
+    margin: 20px auto;
     max-width: 700px;
+    display: flex;
+    justify-content: center;
 }
 
-.searchbar {
+#searchbar button img {
+    width: 24px;
+    height: 24px;
+}
+
+#searchbar {
     width: 100%;
     display: flex;
     align-items: center;
-    border-radius: 60px;
-    padding: 0 18px;
+    border-radius: 40px;
+    padding: 20px 30px;
     border: 2px solid #290248;
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(4px) saturate(180%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.searchbar input {
+#searchbar input {
     flex: 1;
     background: transparent;
-    margin-top: 10px;
     border: none;
     outline: none;
-    padding: 12px 15px;
     font-size: 18px;
     color: #290248;
 }
 
-.searchbar input:focus {
-    border-color: none;
-    box-shadow: none;
-}
-
-.searchbar input::placeholder {
+#searchbar input::placeholder {
     color: #3c006b;
 }
 
-.searchbar button img {
-    width: 24px;
-    /* Adjust icon size */
-}
-
-.searchbar button {
+#searchbar button {
     border: none;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     background: #290248;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
 }
+
+#searchbar button:hover {
+    background-color: #3c006b;
+}
+
+/* Floating Card */
+.floating-card {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.close-card {
+    align-self: flex-end;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.close-card:hover {
+    color: red;
+}
+
+/* Results Container */
+.results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.suggestion {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.suggestion:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Chef cards styles */
+.results-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.chef-cards {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    flex: 0 0 auto; /* Make cards not grow beyond their content */
+}
+
+.chef-cards img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+}
+
+.chef-cards h3 {
+    margin: 8px 0;
+    font-size: 1.2em;
+}
+
+.chef-cards p {
+    font-size: 1em;
+    color: #555;
+}
+
+
 
 /* designing chef card */
 .top-rated-chefs {
@@ -421,7 +516,6 @@ label {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
-    margin-bottom: 20px;
     transition: all 0.3s ease;
 }
 
@@ -604,36 +698,30 @@ textarea:focus {
     margin-bottom: 10px;
 }
 
-.photo-upload-center {
+.chef-profile-pic-container {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.profile-photo-wrapper {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
+.chef-profile-pic-label {
+    display: inline-block;
+    cursor: pointer;
 }
 
-#profile-photo-preview {
-    width: 100%;
-    height: 100%;
+#chef-profile-pic-preview {
+    text-align: center;
+    width: 121px;
+    height: 121px;
     border-radius: 50%;
-    object-fit: cover;
     border: 2px solid #fff;
 }
 
-#photo-upload {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-    top: 0;
-    left: 0;
+#chef-img-preview {
+    width: 118px;
+    height: 118px;
+    object-fit: cover;
+    border-radius: 50%;
 }
-
 .chef-profile-form {
     display: flex;
     flex-wrap: wrap;
@@ -667,7 +755,6 @@ select {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
-    margin-bottom: 20px;
     transition: all 0.3s ease;
 }
 

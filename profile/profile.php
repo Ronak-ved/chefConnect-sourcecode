@@ -30,7 +30,7 @@ if (isset($_POST['update_button'])) {
 
     // Handle file upload
     if (isset($_FILES['profile-pic']) && $_FILES['profile-pic']['error'] == UPLOAD_ERR_OK) {
-        $upload_dir = '../assets/uploads/';
+        $upload_dir = '../assets/uploads/user_pic/';
         $file_name = basename($_FILES['profile-pic']['name']);
         $target_file = $upload_dir . $file_name;
         $file_type = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -115,7 +115,7 @@ mysqli_close($conn);
                     <div id="profile-pic-preview">
                         <img id="img-preview"
                             src="<?php if ($user_data['user_pic'] != '') {
-                                echo '../assets/uploads/' . htmlspecialchars($user_data['user_pic']);
+                                echo '../assets/uploads/user_pic/' . htmlspecialchars($user_data['user_pic']);
                             } else {
                                 echo '../assets/web_images/default-profile-pic.jpeg';
                             } ?>"

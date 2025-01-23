@@ -28,7 +28,7 @@ $conn->close(); // Close the database connection
 
 <body>
     <nav class="navbar chef-nav"> 
-        <div class="comname"><img src="logo.webp" alt="cheflogo">ChefConnect</div>
+        <div class="comname"><img src="../assets/web_images/logo.webp" alt="cheflogo">ChefConnect</div>
         <ul class="nav-link">
             <li><a href="chef_home.php">Home</a></li>
             <li><a href="../profile/chef_profile.php">Profile</a></li>
